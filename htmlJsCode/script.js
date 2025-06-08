@@ -35,4 +35,20 @@ for(let i=5 ;i>0;i--){
 }
 console.log(fact)
 
+// Using nested for loop to print a pattern of numbers
+var value=1
+for(var i=1;i<4;i++){
+    var string = ""
+    for(var j=1; j<4 ;j++){
+        string += value;
+        value++
+    }
+    console.log(string)
+}
+// Using for loop to print an array in reverse order
+let arr1 = [1,2,3,4,5]
+for(var i=arr1.length-1;i>=0;i--){
+   
+    console.log(arr1[i])
+}
 
