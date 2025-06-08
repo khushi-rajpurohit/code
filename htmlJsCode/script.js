@@ -1,4 +1,4 @@
-for (let i = 4 ; i>0;i--){
+for (let i = 4; i > 0; i--) {
     console.log(i)
 }
 //using for loop to print numbers from 0 to 9
@@ -6,8 +6,8 @@ for (let i = 4 ; i>0;i--){
 let a = 1
 let sum = 0
 
-while( a<11){
-     sum = sum +a
+while (a < 11) {
+    sum = sum + a
     a++
 }
 console.log(sum)
@@ -15,14 +15,14 @@ console.log(sum)
 // Using for...of loop to iterate over a string
 // This will print each character in the string on a new line
 let str = " JavaScript";
-for(let akshar of str){
+for (let akshar of str) {
     console.log(akshar)
 }
 
 
-for (var i=0 ;i<21;i++){
-    if(i%2 !==0){
-        console.log("oddnumbers are : " , i)
+for (var i = 0; i < 21; i++) {
+    if (i % 2 !== 0) {
+        console.log("oddnumbers are : ", i)
     }
 }
 
@@ -30,25 +30,54 @@ for (var i=0 ;i<21;i++){
 
 let fact = 1;
 
-for(let i=5 ;i>0;i--){
+for (let i = 5; i > 0; i--) {
     fact = fact * i
 }
 console.log(fact)
 
 // Using nested for loop to print a pattern of numbers
-var value=1
-for(var i=1;i<4;i++){
+var value = 1
+for (var i = 1; i < 4; i++) {
     var string = ""
-    for(var j=1; j<4 ;j++){
+    for (var j = 1; j < 4; j++) {
         string += value;
         value++
     }
     console.log(string)
 }
 // Using for loop to print an array in reverse order
-let arr1 = [1,2,3,4,5]
-for(var i=arr1.length-1;i>=0;i--){
-   
+let arr1 = [1, 2, 3, 4, 5]
+for (var i = arr1.length - 1; i >= 0; i--) {
+
     console.log(arr1[i])
 }
+//method=> console.log(arr1.reverse())
+//but using for loop to reverse an array 
 
+for (i = 0; i < Math.floor(arr1.length / 2); i++) {
+    var temp = arr1[i];
+    arr1[i] = arr1[arr1.length - 1 - i];
+    arr1[arr1.length - 1 - i] = temp;
+
+}
+console.log(arr1)
+
+// Using while loop to print numbers from 1 to 100 that are divisible by 5
+var num = 1
+while (num < 101) {
+    if (num % 5 === 0)
+        console.log(num)
+    num++
+
+}
+
+var object = {
+    name: "Khushi",
+    lastName: "Rajpurohit",
+    email: "rajpurohitkhushi362gmail.com",
+    age: 20,
+}
+for (let key in object) {
+    console.log(key);
+
+}
