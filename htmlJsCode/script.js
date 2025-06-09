@@ -109,4 +109,17 @@ console.log(movies.indexOf("Kungfu Panda"))
 console.log(movies.includes("Neemo"))
 console.log( movies.concat(arr1)) 
 
+// Using for loop to sort an array using bubble sort algorithm
+// Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. 
+var arr2 = [5,2,9,8];
+for(let i=0;i<arr2.length;i++){
+    for(let j = 0;j<arr2.length -1;j++){
+if(arr2[j]>arr2[j+1]){
+    var temp = arr2[j];
+    arr2[j]= arr2[j+1];
+    arr2[j+1]= temp
+}
+    }
+}
+console.log(arr2)
 
