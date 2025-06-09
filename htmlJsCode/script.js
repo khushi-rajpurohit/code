@@ -81,3 +81,32 @@ for (let key in object) {
     console.log(key);
 
 }
+
+var movies = ["Avengers","Housefull","Kungfu Panda","Neemo","Welcome"];
+
+for(let i=0;i<movies.length;i++){
+    console.log(movies[i])
+   
+}
+// Using forEach to iterate over an array
+movies.forEach(function(value){
+    console.log(value)
+})
+
+//logging 2nd element of array
+console.log(movies[1])
+
+movies.unshift("Shkatiman","Mahabharat");  //adding elements at the beginning of the array
+console.log(movies)     
+movies.push("Krrish","Dangal"); //adding elements at the end of the array
+console.log(movies)
+console.log(movies.pop())  //removing last element of the array
+console.log(movies)
+console.log(movies.slice(0,3)) //slicing the array from index 0 to 3
+console.log(movies.splice(1,2)) //removing 2 elements from index 1
+console.log(movies)
+console.log(movies.indexOf("Kungfu Panda")) 
+console.log(movies.includes("Neemo"))
+console.log( movies.concat(arr1)) 
+
+
