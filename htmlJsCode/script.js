@@ -82,44 +82,89 @@ for (let key in object) {
 
 }
 
-var movies = ["Avengers","Housefull","Kungfu Panda","Neemo","Welcome"];
+var movies = ["Avengers", "Housefull", "Kungfu Panda", "Neemo", "Welcome"];
 
-for(let i=0;i<movies.length;i++){
+for (let i = 0; i < movies.length; i++) {
     console.log(movies[i])
-   
+
 }
 // Using forEach to iterate over an array
-movies.forEach(function(value){
+movies.forEach(function (value) {
     console.log(value)
 })
 
 //logging 2nd element of array
 console.log(movies[1])
 
-movies.unshift("Shkatiman","Mahabharat");  //adding elements at the beginning of the array
-console.log(movies)     
-movies.push("Krrish","Dangal"); //adding elements at the end of the array
+movies.unshift("Shkatiman", "Mahabharat");  //adding elements at the beginning of the array
+console.log(movies)
+movies.push("Krrish", "Dangal"); //adding elements at the end of the array
 console.log(movies)
 console.log(movies.pop())  //removing last element of the array
 console.log(movies)
-console.log(movies.slice(0,3)) //slicing the array from index 0 to 3
-console.log(movies.splice(1,2)) //removing 2 elements from index 1
+console.log(movies.slice(0, 3)) //slicing the array from index 0 to 3
+console.log(movies.splice(1, 2)) //removing 2 elements from index 1
 console.log(movies)
-console.log(movies.indexOf("Kungfu Panda")) 
+console.log(movies.indexOf("Kungfu Panda"))
 console.log(movies.includes("Neemo"))
-console.log( movies.concat(arr1)) 
+console.log(movies.concat(arr1))
 
 // Using for loop to sort an array using bubble sort algorithm
 // Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. 
-var arr2 = [5,2,9,8];
-for(let i=0;i<arr2.length;i++){
-    for(let j = 0;j<arr2.length -1;j++){
-if(arr2[j]>arr2[j+1]){
-    var temp = arr2[j];
-    arr2[j]= arr2[j+1];
-    arr2[j+1]= temp
-}
+var arr2 = [5, 2, 9, 8];
+for (let i = 0; i < arr2.length - 1; i++) {
+    for (let j = 0; j < arr2.length - i - 1; j++) {
+        if (arr2[j] > arr2[j + 1]) {
+            var temp = arr2[j];
+            arr2[j] = arr2[j + 1];
+            arr2[j + 1] = temp
+        }
     }
 }
 console.log(arr2)
 
+let arr3 = [5, 6, 2, 9, 7, 8]
+console.log(arr3.sort((a, b) => a - b)) //sorting the array in ascending order
+
+var aa = 25;
+function checkEvenNo(aa) {
+    if (aa % 2 === 0) {
+        console.log(`${aa} is evem no`)
+    } else {
+        console.log(`${aa} is not even no`)
+    }
+}
+checkEvenNo(aa); //calling the function to check if the number is even or not
+
+const checkeven = (number) => {
+    if (number % 2 === 0) {
+        console.log(`${number} is even number`);
+    } else {
+        console.log(`${number} is not even number`);
+    }
+}
+checkeven(22); //calling the arrow function to check if the number is even or not
+// Using arrow function to calculate the area of a circle
+const areaOfCircle = (radius) => {
+
+    area = Math.PI * radius * radius
+    console.log(Math.round(area));
+}
+areaOfCircle(12)
+// Using arrow function to calculate the sum of an array
+const sumOfArray = (array) => {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i]
+    }
+    console.log(sum)
+}
+sumOfArray(arr1)
+
+const checker = (string, char) => {
+    if (string[0] === char) {
+        console.log(`The character "${char}" is present in the string "${string}".`);
+    }
+}
+
+checker("Khushi", "K"); 
