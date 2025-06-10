@@ -166,5 +166,34 @@ const checker = (string, char) => {
         console.log(`The character "${char}" is present in the string "${string}".`);
     }
 }
-
 checker("Khushi", "K"); 
+
+const maxNo = (a,b )=>{
+    if(a>b){
+        console.log(`${a} is greater than 4{b}`)
+    }else{
+        console.log(`${b} is greater than ${a}`)
+    }
+}
+maxNo(15,30)
+
+const factorial = (number)=>{
+    let value = 1;
+    for(let i = 1;i<= number;i++){
+ value *= i
+    }
+    console.log(value)
+}
+factorial(4);
+
+const reversedStr =(str)=>{
+    let reversed = ""
+    for(let i=str.length-1; i>=0;i--){
+        
+        reversed +=str[i]
+        
+        console.log(reversed)
+    }
+    return reversed;
+}
+reversedStr("Khushi");
