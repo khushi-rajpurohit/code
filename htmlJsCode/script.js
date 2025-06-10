@@ -166,34 +166,66 @@ const checker = (string, char) => {
         console.log(`The character "${char}" is present in the string "${string}".`);
     }
 }
-checker("Khushi", "K"); 
+checker("Khushi", "K");
 
-const maxNo = (a,b )=>{
-    if(a>b){
+const maxNo = (a, b) => {
+    if (a > b) {
         console.log(`${a} is greater than 4{b}`)
-    }else{
+    } else {
         console.log(`${b} is greater than ${a}`)
     }
 }
-maxNo(15,30)
+maxNo(15, 30)
 
-const factorial = (number)=>{
+const factorial = (number) => {
     let value = 1;
-    for(let i = 1;i<= number;i++){
- value *= i
+    for (let i = 1; i <= number; i++) {
+        value *= i
     }
     console.log(value)
 }
 factorial(4);
 
-const reversedStr =(str)=>{
+const reversedStr = (str) => {
     let reversed = ""
-    for(let i=str.length-1; i>=0;i--){
-        
-        reversed +=str[i]
-        
-        console.log(reversed)
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i]
     }
-    return reversed;
+    console.log(reversed);
 }
 reversedStr("Khushi");
+
+const reverseMethod = (str) => {  // Using split, reverse, and join methods to reverse a string
+    console.log(str.split('').reverse().join(''))
+}
+reverseMethod("Perfact");
+
+const findMax = (arr) => {
+    let maxNo = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > arr[0]) {
+            maxNo = arr[i]
+        }
+    }
+    console.log(maxNo)
+}
+let arr4 = [52, 64, 32, 12];
+findMax(arr4); 
+
+const kababcase = (str)=>{
+    let STR = str.toLowerCase().split("")
+    for(let i =0;i<STR.length;i++){
+        if(STR[i]=== " "){
+            STR[i]= "-"
+        }
+    }
+    console.log(STR.join(""))
+}
+kababcase("Apple Banana")
+// Using a function (using methods) to convert a string to kebab-case can also use replace/replaceAAll(" ","-") instid of split and join
+const KababCaseMethod =(str)=>{
+    STR=str.toLowerCase().split(" ").join("-")
+    console.log(STR)
+}
+KababCaseMethod("The Story Of Mahabharat")
+
