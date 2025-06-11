@@ -40,3 +40,19 @@ let school = {
 for (let key in school) {
     console.log(school[key])
 }
+//print even no 1-100
+for(let num=0;num<=100;num++){
+    if(num%2 == 0){
+        console.log(num)
+    }
+}
+//
+let gameNo = 25;
+let userNo = prompt("Guess the number between 1 to 50");
+if( userNo != gameNo){
+    let userNo =  prompt("Wrong guess! Try again");
+}else{
+console.log("You guessed the number correctly!");}
+
+//strings
+
