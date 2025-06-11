@@ -1,4 +1,4 @@
-console.log("Loops Practice");
+console.log("Loops and strings in JavaScript");
 
 //for loop
 let array = "abcdefghijklmnopqrstuvwxyz"
@@ -41,11 +41,11 @@ for (let key in school) {
     console.log(school[key])
 }
 //print even no 1-100
-for(let num=0;num<=100;num++){
-    if(num%2 == 0){
-        console.log(num)
-    }
-}
+// for(let num=0;num<=100;num++){
+//     if(num%2 == 0){
+//         console.log(num)
+//     }
+// }
 
 //strings
 // --> string interpolation ==> template literals usage to substitue placeholders using ${}
@@ -64,8 +64,8 @@ console.log(str5.replace("P","F")); //for once replaceAll to replace every time
 console.log(str5.charAt(5));
 
 //prompt
-let  fullName = prompt("Enter your full name");
-let userName = "@"+  fullName + fullName.length;
-console.log(userName);
+// let  fullName = prompt("Enter your full name");
+// let userName = "@"+  fullName + fullName.length;
+// console.log(userName);
 
 

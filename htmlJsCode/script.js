@@ -95,19 +95,20 @@ movies.forEach(function (value) {
 
 //logging 2nd element of array
 console.log(movies[1])
-
-movies.unshift("Shkatiman", "Mahabharat");  //adding elements at the beginning of the array
+//array methods
+movies.unshift("Shkatiman", "Mahabharat");  //adding elements at the beginning of the array -->shift removes first element
 console.log(movies)
 movies.push("Krrish", "Dangal"); //adding elements at the end of the array
 console.log(movies)
 console.log(movies.pop())  //removing last element of the array
 console.log(movies)
-console.log(movies.slice(0, 3)) //slicing the array from index 0 to 3
-console.log(movies.splice(1, 2)) //removing 2 elements from index 1
+console.log(movies.slice(0, 3)) //slicing the array from index 0 to 3 does not gives original array
+console.log(movies.splice(1, 2)) //removing 2 elements from index 1 -->changes originall array
 console.log(movies)
 console.log(movies.indexOf("Kungfu Panda"))
-console.log(movies.includes("Neemo"))
+console.log(movies.includes("Neemo")) // answer is true
 console.log(movies.concat(arr1))
+console.log(movies.toString()) // answer is "Shkatiman, Mahabharat, Avengers, Housefull, Kungfu Panda, Neemo, Welcome, Krrish, Dangal, 1,2,3,4,5"
 
 // Using for loop to sort an array using bubble sort algorithm
 // Bubble sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. 

@@ -4,6 +4,7 @@
   },
   "scripts": {
     "start": "nodemon script.js",
-    "start2": "nodemon script2.js"
+    "start2": "nodemon script2.js",
+    "start3": "nodemon script3.js"
   }
 }
