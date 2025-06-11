@@ -46,13 +46,26 @@ for(let num=0;num<=100;num++){
         console.log(num)
     }
 }
-//
-let gameNo = 25;
-let userNo = prompt("Guess the number between 1 to 50");
-if( userNo != gameNo){
-    let userNo =  prompt("Wrong guess! Try again");
-}else{
-console.log("You guessed the number correctly!");}
 
 //strings
+// --> string interpolation ==> template literals usage to substitue placeholders using ${}
+// --> n/ and t/ ==> escape  characters for line change and tab space
+
+
+//string methods -- built in functions to manupulate strings ..
+// original string doesnt change beacuse strings are immutables
+
+let str5 = "Perfection is on Way   ";
+console.log(str5.toUpperCase()); 
+console.log(str5.toLowerCase());
+console.log(str5.trim());
+console.log(str5.slice(2,4));
+console.log(str5.replace("P","F")); //for once replaceAll to replace every time
+console.log(str5.charAt(5));
+
+//prompt
+let  fullName = prompt("Enter your full name");
+let userName = "@"+  fullName + fullName.length;
+console.log(userName);
+
 
