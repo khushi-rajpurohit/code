@@ -14,3 +14,9 @@ console.log(arr2);
 arr2.push("Amazon") // adds "Amazon" at the end of the array and returns the new length of the array
 console.log(arr2);
 
+// removing duplicate values
+ let arr3 = ["apple","banana","mango","apple","kivi","kivi","orange","banana","apple"];
+
+let uA = new Set(arr3)
+console.log(uA); // Set { 1, 2, 3, 4, 5 }
+
