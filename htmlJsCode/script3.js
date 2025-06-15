@@ -15,8 +15,26 @@ arr2.push("Amazon") // adds "Amazon" at the end of the array and returns the new
 console.log(arr2);
 
 // removing duplicate values
- let arr3 = ["apple","banana","mango","apple","kivi","kivi","orange","banana","apple"];
+let arr3_0 = ["apple", "banana", "mango", "apple", "kivi", "kivi", "orange", "banana", "apple"];
 
-let uA = new Set(arr3)
+let uA = new Set(arr3_0)
 console.log(uA); // Set { 1, 2, 3, 4, 5 }
 
+let arr3=[ 1,2,4,2,4,5,6,7,6,7]
+const removeDuplicates = (arr3) => {
+    for (let i = 0; i < arr3.length; i++) {
+        let word1 = arr3[i];
+        for (let j = i+1; j < arr3.length; j++) {
+            let word2 = arr3[j];
+            if(word1===word2 ){
+                arr3.splice(j,1);
+                j--; // Decrement j to account for the removed element  
+            }
+            
+        }
+       
+
+    }
+    return arr3;
+    console.log(arr3)
+}
