@@ -69,7 +69,7 @@ console.log(largestNo(arr4))
 
 const countFrequency = (arr,target)=>{
     let count = 0;
-    for(let i=arr;i<arr.length;i++){
+    for(let i=0;i<arr.length;i++){
         if(arr[i]===target){
             count = count + 1
         }
