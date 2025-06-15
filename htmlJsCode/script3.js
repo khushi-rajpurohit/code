@@ -38,3 +38,17 @@ const removeDuplicates = (arr3) => {
     return arr3;
     console.log(arr3)
 }
+
+
+//sum of elements
+let arr4 = [1, 2, 3, 4, 5];
+const sumOfArr = (arr4)=>{
+    let sum = 0;
+    for(let i =0;i<arr4.length;i++){
+        sum = sum +arr4[i];
+       
+    }
+    
+    return sum;
+}
+console.log(sumOfArr(arr4))
