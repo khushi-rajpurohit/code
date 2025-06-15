@@ -52,3 +52,15 @@ const sumOfArr = (arr4)=>{
     return sum;
 }
 console.log(sumOfArr(arr4))
+
+//returning the largest element
+const largestNo = (arr)=>{
+    let maxNo = arr[0];
+    for(let i =0 ;i<arr.length;i++){
+        if(arr[i]>maxNo){
+            maxNo=arr[i]
+        }
+    }
+    return maxNo;
+}
+console.log(largestNo(arr4))
