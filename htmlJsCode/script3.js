@@ -20,45 +20,53 @@ let arr3_0 = ["apple", "banana", "mango", "apple", "kivi", "kivi", "orange", "ba
 let uA = new Set(arr3_0)
 console.log(uA); // Set { 1, 2, 3, 4, 5 }
 
-let arr3=[ 1,2,4,2,4,5,6,7,6,7]
+let arr3 = [1, 2, 4, 2, 4, 5, 6, 7, 6, 7]
 const removeDuplicates = (arr3) => {
     for (let i = 0; i < arr3.length; i++) {
         let word1 = arr3[i];
-        for (let j = i+1; j < arr3.length; j++) {
+        for (let j = i + 1; j < arr3.length; j++) {
             let word2 = arr3[j];
-            if(word1===word2 ){
-                arr3.splice(j,1);
+            if (word1 === word2) {
+                arr3.splice(j, 1);
                 j--; // Decrement j to account for the removed element  
             }
-            
         }
-       
-
     }
     return arr3;
     console.log(arr3)
 }
+//remove the duplicate values from the array
+const removeDuplicatesFromArr = (arr) => {
+    let uniqueArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i])
+        }
+    }
+    return uniqueArr;
+}
+console.log(removeDuplicatesFromArr(arr3_0));
 
 
 //sum of elements
 let arr4 = [1, 2, 3, 4, 5];
-const sumOfArr = (arr4)=>{
+const sumOfArr = (arr4) => {
     let sum = 0;
-    for(let i =0;i<arr4.length;i++){
-        sum = sum +arr4[i];
-       
+    for (let i = 0; i < arr4.length; i++) {
+        sum = sum + arr4[i];
+
     }
-    
+
     return sum;
 }
 console.log(sumOfArr(arr4))
 
 //returning the largest element
-const largestNo = (arr)=>{
+const largestNo = (arr) => {
     let maxNo = arr[0];
-    for(let i =0 ;i<arr.length;i++){
-        if(arr[i]>maxNo){
-            maxNo=arr[i]
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > maxNo) {
+            maxNo = arr[i]
         }
     }
     return maxNo;
@@ -67,13 +75,60 @@ console.log(largestNo(arr4))
 
 // cont the frequency of target value in arr
 
-const countFrequency = (arr,target)=>{
+const countFrequency = (arr, target) => {
     let count = 0;
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]===target){
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
             count = count + 1
         }
     }
     return count;
 }
-console.log(countFrequency(arr3_0,"apple"))
+console.log(countFrequency(arr3_0, "apple"))
+
+// reverse the array
+const reverseArr = (arr) => {
+    let reversedArr = []
+    for (let i = arr.length - 1; i >= 0; i--) {
+        reversedArr.push(arr[i])
+    }
+    return reversedArr;
+}
+console.log(reverseArr(arr4))
+
+// find the index of target value in arr
+const findIndex = (arr, target) => {
+    let index
+    for (let i = 0; i < arr.length; i++) {
+
+        if (arr[i] === target) {
+            index = i
+        } else if (arr[i] !== target) {
+            index = "Not found in arr"
+        }
+
+    }
+    return index
+}
+console.log(findIndex(arr4, 44))
+
+console.log(arr4.indexOf(3)) // returns the index of the first occurrence of the specified value in the array, or -1 if it is not present;
+
+// return indices of the two numbers such that they add up to target
+
+const sumTarget = (arr ,target) =>{
+    let indices = [];
+    for(let i =0;i<arr.length;i++){
+
+        for(let j = i+1 ;j < arr.length ; j++){
+            if( i !=j && arr[i]+arr[j] === target ){
+                indices.push(i,j)
+            }
+        }
+    }
+    return indices 
+}
+console.log(sumTarget(arr4, 6)) 
+
+
+
