@@ -130,5 +130,18 @@ const sumTarget = (arr ,target) =>{
 }
 console.log(sumTarget(arr4, 6)) 
 
+// // find the intersection of two arrays
+const intersection = (arr1,arr2)=>{
+    let result = [];
+    for(let i=0;i<arr1.length;i++){
+        if(arr2.includes(arr1[i])&& !result.includes(arr1[i])){
+            result.push(arr1[i])
+        }
+    }
+    return result;
+}
+arr5 = [3,5,6,8,9]
+console.log(intersection( arr4,arr5))
+
 
 
