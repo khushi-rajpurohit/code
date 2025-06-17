@@ -143,5 +143,20 @@ const intersection = (arr1,arr2)=>{
 arr5 = [3,5,6,8,9]
 console.log(intersection( arr4,arr5))
 
+// Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]
 
+const productArr =(arr)=>{
+    let answer =[]
+    for(let i = 0;i<arr.length;i++){
+        let product = 1;
+        for (let j=0;j<arr.length;j++){
+            if(i!==j){
+                product *= arr[j];
+            }
+        }
+        answer.push(product)
+    }
+    return answer
+}
 
+console.log(productArr(arr4))
