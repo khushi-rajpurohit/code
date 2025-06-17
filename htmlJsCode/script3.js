@@ -116,41 +116,40 @@ console.log(arr4.indexOf(3)) // returns the index of the first occurrence of the
 
 // return indices of the two numbers such that they add up to target
 
-const sumTarget = (arr ,target) =>{
+const sumTarget = (arr, target) => {
     let indices = [];
-    for(let i =0;i<arr.length;i++){
+    for (let i = 0; i < arr.length; i++) {
 
-        for(let j = i+1 ;j < arr.length ; j++){
-            if( i !=j && arr[i]+arr[j] === target ){
-                indices.push(i,j)
+        for (let j = i + 1; j < arr.length; j++) {
+            if (i != j && arr[i] + arr[j] === target) {
+                indices.push(i, j)
             }
         }
     }
-    return indices 
+    return indices
 }
-console.log(sumTarget(arr4, 6)) 
+console.log(sumTarget(arr4, 6))
 
 // // find the intersection of two arrays
-const intersection = (arr1,arr2)=>{
+const intersection = (arr1, arr2) => {
     let result = [];
-    for(let i=0;i<arr1.length;i++){
-        if(arr2.includes(arr1[i])&& !result.includes(arr1[i])){
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr2.includes(arr1[i]) && !result.includes(arr1[i])) {
             result.push(arr1[i])
         }
     }
     return result;
 }
-arr5 = [3,5,6,8,9]
-console.log(intersection( arr4,arr5))
+arr5 = [3, 5, 6, 8, 9]
+console.log(intersection(arr4, arr5))
 
-// Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i]
-
-const productArr =(arr)=>{
-    let answer =[]
-    for(let i = 0;i<arr.length;i++){
+// Product of Array Except Self
+const productArr = (arr) => {
+    let answer = []
+    for (let i = 0; i < arr.length; i++) {
         let product = 1;
-        for (let j=0;j<arr.length;j++){
-            if(i!==j){
+        for (let j = 0; j < arr.length; j++) {
+            if (i !== j) {
                 product *= arr[j];
             }
         }
@@ -160,3 +159,18 @@ const productArr =(arr)=>{
 }
 
 console.log(productArr(arr4))
+
+// give sets of  of three unique elments such that there sum is 0
+
+const threeSum = (arr) => {
+    let result = [];
+    for (let i = 0; i < arr.length - 2; i++) {
+        let sum = arr[i] + arr[i + 1] + arr[i + 2];
+        if(sum == 0){
+            result.push([arr[i], arr[i + 1], arr[i + 2]]);
+        }
+    }
+    return result;
+}
+
+console.log(threeSum([0, -1, 2, -3, 1, 4, -2, 3, -1]));
