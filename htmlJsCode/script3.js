@@ -164,10 +164,16 @@ console.log(productArr(arr4))
 
 const threeSum = (arr) => {
     let result = [];
-    for (let i = 0; i < arr.length - 2; i++) {
-        let sum = arr[i] + arr[i + 1] + arr[i + 2];
-        if(sum == 0){
-            result.push([arr[i], arr[i + 1], arr[i + 2]]);
+    for (let i = 0; i < arr.length ; i++) {
+        for (let j = i + 1; j < arr.length; j++) {
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] === 0 && i !== j && j !== k && i !== k) {
+                    let triplet = [arr[i], arr[j], arr[k]].sort((a, b) => a - b);
+                    if (!result.some(r => r[0] === triplet[0] && r[1] === triplet[1] && r[2] === triplet[2])) {
+                        result.push(triplet);
+                    }
+                }
+            }
         }
     }
     return result;
