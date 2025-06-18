@@ -180,3 +180,14 @@ const threeSum = (arr) => {
 }
 
 console.log(threeSum([0, -1, 2, -3, 1, 4, -2, 3, -1]));
+
+
+//rotate the array by k elements
+const rotate = (arr, k) => {
+    k = k % arr.length; // Handle cases where k is greater than the array length
+    let rotatedArr = arr.slice(-k).concat(arr.slice(0, arr.length - k));
+    console.log(rotatedArr);
+    return rotatedArr;
+}
+let arr6 = [1, 2, 3, 4, 5, 6, 7];
+rotate(arr6, 3);
