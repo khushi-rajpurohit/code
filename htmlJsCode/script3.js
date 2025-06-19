@@ -191,3 +191,21 @@ const rotate = (arr, k) => {
 }
 let arr6 = [1, 2, 3, 4, 5, 6, 7];
 rotate(arr6, 3);
+
+// return the sum of two numbers  from such that it should be greater ..
+
+let greatesSum = ( arr)=>{
+    let sum = 0;
+
+    let sortedArr =  arr.sort((a,b)=>a-b)
+    console.log(sortedArr)
+
+    let num1= sortedArr[sortedArr.length - 1];
+    let num2 = sortedArr[sortedArr.length - 2];
+    sum = num1 + num2;
+
+    return sum
+}
+let arr7 = [2,8,6,3,9,4,2]
+
+console.log(greatesSum(arr7))
