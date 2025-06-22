@@ -20,3 +20,15 @@ count2(); // 1
 count1(); // 4  //Each time counter1() is called, it accesses and increments its own private count variable
 count2(); // 2 //These calls interact with counter2's own, independent count variable. They don't affect counter1's count
 
+//example 2
+
+function greeter (preifx){
+    return function (name){
+        console.log(`${preifx} ${name}!`);
+    }
+}
+let greetHello = greeter("Hello");
+let greetNamste = greeter("Namaste");
+
+greetHello("Khushi"); // Hello Khushi!
+greetNamste("Khushi"); // Namaste Khushi!
