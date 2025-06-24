@@ -32,3 +32,36 @@ let greetNamste = greeter("Namaste");
 
 greetHello("Khushi"); // Hello Khushi!
 greetNamste("Khushi"); // Namaste Khushi!
+
+//Oops
+
+//inheritance
+
+class Animal {
+    constructor(name){
+        this.name = name;
+    }
+    eat(){
+        console.log(`${this.name} is eating`);
+    }
+    sleep(){
+        console.log(`${this.name} is sleeping`);
+    }
+}
+
+//child class
+
+class Dog extends Animal{
+    constructor(name , breed){
+        super(name); 
+        this.breed = breed; 
+    }
+    bark(){
+        console.log(`${this.name} is barking`);
+    }
+}
+
+const Doggy = new Dog("Tommy","A");
+
+Doggy.bark()
+Doggy.eat()
