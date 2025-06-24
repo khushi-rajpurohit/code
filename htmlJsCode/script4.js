@@ -65,3 +65,59 @@ const Doggy = new Dog("Tommy","A");
 
 Doggy.bark()
 Doggy.eat()
+
+
+// // for button
+
+class Button {
+    constructor(text,id){
+        this.text = text;
+        this.id = id;
+        this.buttonComoponent = this.createButtonElement(); 
+        this.addBaseStyle();
+}
+createButtonElement(){
+    const btn = document.createElement("button");
+    btn.textContent = this.text;
+    btn.id = this.id;
+    return btn;
+}
+addBaseStyle(){
+    this.buttonComoponent.style.padding = "10px 20px";
+    this.buttonComoponent.style.backgroundColor = "#4CAF50";
+    this.buttonComoponent.style.color = "white";
+    this.buttonComoponent.style.border = "none";
+    this.buttonComoponent.style.borderRadius = "5px";
+    this.buttonComoponent.style.cursor = "pointer";
+}
+onClick(callback){
+    this.buttonComoponent.addEventListener("click",callback)
+}
+render(parentElement){
+    parentElement.appendChild(this.buttonComoponent);
+}
+}
+
+//
+class SubmitButton extends Button {
+    constructor(text="Submit", id){
+        super(text, id);
+        this.buttonComoponent.type = "submit"; 
+        this.addSubmitStyle();
+    }
+    addSubmitStyle(){
+        this.buttonComoponent.style.backgroundColor = "#008CBA"; // Different color for submit button
+    }
+    
+}
+
+const appDiv = document.getElementById('app') || document.body; // Ensure we have a place to render
+
+const defaultBtn = new Button("Click Me");
+defaultBtn.onClick(() => console.log("Default button clicked!"));
+defaultBtn.render(appDiv);
+
+const submitBtn = new SubmitButton("Save Data", "saveBtn");
+
+submitBtn.onClick(() => console.log("Submit button logic here!")); // You can still add more click handlers
+submitBtn.render(appDiv);
