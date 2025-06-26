@@ -121,3 +121,20 @@ const submitBtn = new SubmitButton("Save Data", "saveBtn");
 
 submitBtn.onClick(() => console.log("Submit button logic here!")); // You can still add more click handlers
 submitBtn.render(appDiv);
+
+function findLargestNumber(arr) {
+  if (arr.length === 0) {
+    return undefined; // Or throw an error, depending on requirements for an empty array
+  }
+
+  let maxNum = arr[0];
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > maxNum) {
+      maxNum = arr[i];
+    }
+  }
+  return maxNum;
+}
+
+const numbers = [12, 5, 28, 9, 33, 17];
+console.log(findLargestNumber(numbers));
