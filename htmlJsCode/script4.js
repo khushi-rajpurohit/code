@@ -67,7 +67,7 @@ Doggy.bark()
 Doggy.eat()
 
 
-// // for button
+//  for button
 
 class Button {
     constructor(text,id){
@@ -86,7 +86,6 @@ addBaseStyle(){
     this.buttonComoponent.style.padding = "10px 20px";
     this.buttonComoponent.style.backgroundColor = "#4CAF50";
     this.buttonComoponent.style.color = "white";
-    this.buttonComoponent.style.border = "none";
     this.buttonComoponent.style.borderRadius = "5px";
     this.buttonComoponent.style.cursor = "pointer";
 }
